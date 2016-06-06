@@ -1,22 +1,110 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VideoTest1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="View1">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cjw-dD-Git">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="Hmr-Ln-j70"/>
+                                    <constraint firstAttribute="height" constant="30" id="xpY-iA-Vaz"/>
+                                </constraints>
+                                <state key="normal" title="播放本地视频"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Hmr-Ln-j70"/>
+                                        <exclude reference="xpY-iA-Vaz"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Hmr-Ln-j70"/>
+                                        <include reference="xpY-iA-Vaz"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="localPlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HGd-Al-M88"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4O-aI-a5H">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="jng-VB-3Lb"/>
+                                    <constraint firstAttribute="height" constant="30" id="x66-2e-ZXq"/>
+                                </constraints>
+                                <state key="normal" title="播放在线视频"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="jng-VB-3Lb"/>
+                                        <exclude reference="x66-2e-ZXq"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="jng-VB-3Lb"/>
+                                        <include reference="x66-2e-ZXq"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="remotePlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jWY-5K-AHp"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cjw-dD-Git" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="66" id="B6d-8N-PFa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Cjw-dD-Git" secondAttribute="bottom" constant="86" id="IOv-lf-ew6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="U4O-aI-a5H" secondAttribute="trailing" constant="67" id="KdA-ir-nbW"/>
+                            <constraint firstItem="U4O-aI-a5H" firstAttribute="top" secondItem="Cjw-dD-Git" secondAttribute="top" id="M4m-IJ-dfN"/>
+                            <constraint firstItem="U4O-aI-a5H" firstAttribute="height" secondItem="Cjw-dD-Git" secondAttribute="height" id="qz3-ef-CiW"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Cjw-dD-Git"/>
+                                <exclude reference="U4O-aI-a5H"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="IOv-lf-ew6"/>
+                                <exclude reference="B6d-8N-PFa"/>
+                                <exclude reference="KdA-ir-nbW"/>
+                                <exclude reference="M4m-IJ-dfN"/>
+                                <exclude reference="qz3-ef-CiW"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Cjw-dD-Git"/>
+                                <include reference="U4O-aI-a5H"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="IOv-lf-ew6"/>
+                                <include reference="B6d-8N-PFa"/>
+                                <include reference="KdA-ir-nbW"/>
+                                <include reference="M4m-IJ-dfN"/>
+                                <include reference="qz3-ef-CiW"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="localButton" destination="Cjw-dD-Git" id="2fo-XZ-nfi"/>
+                        <outlet property="remoteButton" destination="U4O-aI-a5H" id="yrx-8Q-zLf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -14,6 +14,8 @@
 		1F86E0621CFCDB4200B56946 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F86E0601CFCDB4200B56946 /* LaunchScreen.storyboard */; };
 		1F86E06D1CFCDB4200B56946 /* VideoTest1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86E06C1CFCDB4200B56946 /* VideoTest1Tests.swift */; };
 		1F86E0781CFCDB4200B56946 /* VideoTest1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86E0771CFCDB4200B56946 /* VideoTest1UITests.swift */; };
+		1F86E0861CFCDCFD00B56946 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F86E0851CFCDCFD00B56946 /* AVFoundation.framework */; };
+		1F86E0881CFCDD6D00B56946 /* Test1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1F86E0871CFCDD6D00B56946 /* Test1.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		1F86E0731CFCDB4200B56946 /* VideoTest1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoTest1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F86E0771CFCDB4200B56946 /* VideoTest1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTest1UITests.swift; sourceTree = "<group>"; };
 		1F86E0791CFCDB4200B56946 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F86E0851CFCDCFD00B56946 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1F86E0871CFCDD6D00B56946 /* Test1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Test1.mp4; path = ../../../../Test1.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F86E0861CFCDCFD00B56946 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,7 @@
 				1F86E06B1CFCDB4200B56946 /* VideoTest1Tests */,
 				1F86E0761CFCDB4200B56946 /* VideoTest1UITests */,
 				1F86E0551CFCDB4200B56946 /* Products */,
+				1F86E0851CFCDCFD00B56946 /* AVFoundation.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +103,7 @@
 		1F86E0561CFCDB4200B56946 /* VideoTest1 */ = {
 			isa = PBXGroup;
 			children = (
+				1F86E0871CFCDD6D00B56946 /* Test1.mp4 */,
 				1F86E0571CFCDB4200B56946 /* AppDelegate.swift */,
 				1F86E0591CFCDB4200B56946 /* ViewController.swift */,
 				1F86E05B1CFCDB4200B56946 /* Main.storyboard */,
@@ -193,6 +200,7 @@
 				TargetAttributes = {
 					1F86E0531CFCDB4200B56946 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = B3AJ8GF35Q;
 					};
 					1F86E0671CFCDB4200B56946 = {
 						CreatedOnToolsVersion = 7.3;
@@ -230,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F86E0621CFCDB4200B56946 /* LaunchScreen.storyboard in Resources */,
+				1F86E0881CFCDD6D00B56946 /* Test1.mp4 in Resources */,
 				1F86E05F1CFCDB4200B56946 /* Assets.xcassets in Resources */,
 				1F86E05D1CFCDB4200B56946 /* Main.storyboard in Resources */,
 			);
@@ -401,10 +410,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = VideoTest1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lmx.VideoTest1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -412,10 +424,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = VideoTest1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lmx.VideoTest1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -484,6 +499,7 @@
 				1F86E07E1CFCDB4200B56946 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F86E07F1CFCDB4200B56946 /* Build configuration list for PBXNativeTarget "VideoTest1Tests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +508,7 @@
 				1F86E0811CFCDB4200B56946 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F86E0821CFCDB4200B56946 /* Build configuration list for PBXNativeTarget "VideoTest1UITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +517,7 @@
 				1F86E0841CFCDB4200B56946 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
